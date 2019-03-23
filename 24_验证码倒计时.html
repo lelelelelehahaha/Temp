@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" id="message">
+		<input type="text">
+		<input type="submit" value="发送" id="send">
+	</form>
+
+	<script>
+	var msg = document.getElementById("message")
+	var send = document.getElementById("send")
+	var k = 5
+	var timer;
+	msg.onsubmit = function  () {
+		// 开启定时器
+		timer = setInterval(fun,1000)
+
+		return false;	
+	}
+
+	function fun() {
+		k--
+		//当网页被加载时，定时器就会开始执行
+		//每隔1秒更新按钮的值
+		send.value = k
+
+		if (k == 0) {
+			send.value = "重新发送"
+			k = 5
+			clearInterval(timer)
+		};
+	}
+
+	</script>
+</body>
+</html>
