@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+	// 点击任意的键都会触发事件，我们需要知道用户点击的是哪个键
+	// 当一个事件发生时，和这个事件相关的所有信息都会被封装到一个对象中，这个对象称之为事件对象
+		document.body.onkeydown = function  (event) {
+			// console.log(event)
+			if(event.key == 'Enter'){
+				console.log("按下了回车")
+			}
+		}
+	</script>
+</body>
+</html>

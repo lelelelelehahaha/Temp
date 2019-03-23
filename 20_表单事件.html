@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="">
+		qq:<input type="text" id="qq">
+	</form>
+
+	<script>
+		var qq = document.getElementById("qq")
+		qq.onblur = function  () {
+			console.log("qq输入框失去焦点")
+		}
+		qq.onfocus = function  () {
+			console.log("qq输入框获得焦点")
+		}
+	</script>
+</body>
+</html>

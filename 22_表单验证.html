@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 400px;
+			margin: 0 auto;
+
+		}
+		.box input{
+			width: 400px;
+			height: 50px;
+			margin-top: 30px;
+			font-size: 18px;
+		}
+		.box span{
+			color: red;
+			font-size: 13px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<form action="" id="register">
+			<div>
+				<input type="text" placeholder="昵称" id="nickname">
+				<span id="nickname_tip"></span>
+			</div>
+			<div>
+				<input type="password" placeholder="密码" id="pwd">
+				<span id="password_tip"></span>
+			</div>
+			<div>
+				<input type="password" placeholder="确认密码" id="repwd">
+				<span id="repassword_tip"></span>
+			</div>
+			<div>
+				<input type="submit" value="注册">
+			</div>
+		</form>
+	</div>
+	<script>
+	// 昵称对应的输入框
+	var nickname = document.getElementById("nickname")
+	// 获取到昵称的提示标签
+	var nickname_tip = document.getElementById("nickname_tip")
+	nickname.onblur = function  () {
+		//1. 判断昵称框的内容是否符合要求
+		//获取用户填写的内容
+		// console.log(nickname.value)
+		if (nickname.value.length == 0) {
+			console.log("昵称不能为空")
+			nickname_tip.innerText = "昵称不能为空"	
+		}else{
+			nickname_tip.innerText = ""
+		}
+	}
+
+
+	// 验证密码
+	// 获取到显示密码提示的span
+	var pwd_tip = document.getElementById("password_tip")
+
+	var pwd = document.getElementById("pwd")
+	pwd.onblur = function  () {
+		if(pwd.value.length < 6){
+			pwd_tip.innerText = "密码不能少于6位"
+		}else{
+			pwd_tip.innerText = ""
+		}
+	}
+
+	// 确认密码的验证
+	var repwd = document.getElementById("repwd")
+	var repassword_tip = document.getElementById("repassword_tip")
+	repwd.onblur = function  () {
+		if(repwd.value != pwd.value){
+			repassword_tip.innerText = "两次密码输入不一致"
+		}else{
+			repassword_tip.innerText = ""
+		}
+	}
+
+	// 表单提交的事件，此事件必须绑定要表单身上
+	var form = document.getElementById("register")
+	form.onsubmit = function  () {
+		// alert(1)
+		// 为了防止用户直接点击提交，我们需要在这个方法中再重新判断所有的框是否符合要求
+		if(nickname.value.length == 0 || password.value.length < 6 || repwd.value != password.value){
+			// 如果返回false代表不能提交数据
+			return false;
+		}else{
+			return true;
+		}
+
+	}
+	</script>
+</body>
+</html>

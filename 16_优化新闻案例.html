@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		h1{
+			text-align: center;
+		}
+		span{
+			font-size: 12px;
+			font-weight: lighter;
+			color: #ccc;
+		}
+		/* 放大的样式 */
+		.big{
+			font-size: 18px;
+			color: #abcdef;
+			background-color: green;
+		}
+		.small{
+			font-size: 13px;
+			color: green;
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<h1>意大利各界热议习近平主席署名文章</h1>
+	<span>2019-03-21 15:36:14　来源: 新华网</span>
+	<button onclick="changeClass('big')">放大</button>
+	<button onclick="changeClass('small')">缩小</button>
+	<button onclick="changeClass('')">正常</button>
+	<div id="news">
+		<p>新华社罗马3月20日电 在对意大利共和国进行国事访问前夕，国家主席习近平20日在意大利《晚邮报》发表题为《东西交往传佳话 中意友谊续新篇》的署名文章，引发意大利各界热烈反响。</p>
+		<p>意大利多位学者和知名人士在接受新华社记者采访时表示，意中传统友好历久弥新，各领域合作呈现勃勃生机，习近平主席的到访将为两国务实合作带来新机遇，为意中传统友好注入新活力。</p>
+		<p>意大利克拉斯传媒集团首席执行官保罗·帕内拉伊说，习主席在文章中提出的意中合作领域对意大利来说都非常有意义，意中友好应该成为欧洲与中国开展更广泛和真诚合作的样板。“习主席认为意大利是西方文明的杰出代表，这个定义会让所有意大利人感到自豪。文化总是带来和平与繁荣，谢谢习主席！”</p>
+	</div>
+
+	<script>
+		var news = document.getElementById("news")
+		
+
+		function changeClass(cls) {
+			// 更改news的class的值
+			news.className = cls
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+// JS中可以将函数存储到变量中
+	var f = function() {
+		console.log("hello")
+	}
+// 使用变量调用函数
+// f()
+	
+	var a = function(){
+		// 第二部分功能
+		console.log("功能2")
+	}
+
+	function fun (f) {
+		// 第一部分功能
+		console.log("功能1")
+
+		f()
+
+		// 第三部分功能
+		console.log("功能3")
+	}
+
+	// fun(a)
+	// 在调用的直接传递函数
+	fun(function  () {
+		console.log("功能2")
+	})
+	
+
+	</script>
+</body>
+</html>

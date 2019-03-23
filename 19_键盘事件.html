@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	/*
+		当用户触发某个事件时，关于这个事件所有的信息
+		都会被封装到一个对象中，这个对象称之为事件对象
+
+	 */
+		document.body.onkeydown = function(event) {
+			console.log(event)
+			if (event.key == 'w') {
+				console.log("放大招")
+			};
+		}
+
+	</script>
+</body>
+</html>

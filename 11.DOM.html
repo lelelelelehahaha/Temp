@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="abc" class="box" style="color:red">
+		<p>123</p>
+	</div>
+	<img src="xxx.jpg" alt="">
+	<a href="xxxx"></a>
+
+	<script>
+		// DOM: Document Object Model
+		// 文档（网页）对象模型
+		/*
+			当浏览器加载网页时，会将整个网页抽象为对象，包括网页中所有的标签也都抽象为对象
+
+			而且标签中的属性，如id，
+			class,style等等都会被抽象为对象的属性
+		 */
+		// 如何从DOM树中找到对应的元素
+		// 通过document找到了DOM树中的一个id为abc对象
+		var d = document.getElementById("abc")
+		console.log([d])
+		// 更改对象的属性
+		d.style.color = "yellow"
+		console.log(d.id)
+
+		//  JS数组  [1,2,3,4,5]
+
+	</script>
+</body>
+</html>

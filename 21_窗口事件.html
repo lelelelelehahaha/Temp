@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+	</style>
+</head>
+<body>
+	<script>
+		/*
+			内置对象（宿主对象）：
+			窗口对象：window 
+			文档对象：document
+			参数对象：arguments
+		 */
+		
+		//null
+		var t = document.getElementById("t")
+		console.log(t)
+		// 窗口加载事件 onload：当浏览器将网页上的标签都解析完毕时会触发此事件
+		window.onload = function  () {
+			// alert("a")
+			var t = document.getElementById("t")
+			console.log(t)
+		}
+		alert("b")
+	</script>
+
+	<h1 id="t">123</h1>
+
+	<script>
+		//5000
+	</script>
+</body>
+</html>

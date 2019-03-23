@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		h1{
+			background-color:#ccc;
+		}
+	</style>
+</head>
+<body>
+	<!-- 绑定事件的第一种方式，直接在标签中绑定 -->
+	<!-- <h1 onclick="fun()">123</h1> -->
+
+	<!-- 不再使用标签的方式直接 绑定，我们使用JS在代码中绑定事件 -->
+	<h1 id="t">123</h1>
+
+	<script>
+		function fun () {
+			console.log("h1被点击了")
+		}
+		// 1. 获取到h1元素
+		var t = document.getElementById("t")
+		/* 2. 绑定单击事件
+		元素.事件名称 = function (){}
+		*/
+		t.onclick = function() {
+			alert(1)
+		}
+		
+		
+	
+		/*双击事件
+		t.ondblclick = function  () {
+			alert(2)
+		}
+		*/
+	
+		t.onmouseover = function  () {
+			t.style.backgroundColor = "green"
+		}
+		t.onmouseout = function  () {
+			t.style.backgroundColor = "#ccc"
+		}
+	</script>
+</body>
+</html>

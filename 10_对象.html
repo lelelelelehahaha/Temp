@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	/*
+			面向过程 C
+			面向对象 Java C++ Python R C# JavaScript
+			
+			面向过程：
+				函数-》功能
+			面向对象：
+				对象-》方法
+
+			音乐播放器软件
+				C语言完成：
+					播放()
+					暂停()
+					切换歌曲()
+					....
+				Java语言：万事万物皆对象
+					播放器对象
+						播放()
+						暂停()
+						切换歌曲()
+					用户对象
+						属性：
+							年龄
+							性别
+							等级
+							是否是Vip
+							大黄对象
+						方法：
+						加好友()
+						收藏歌曲()
+						评论()
+
+					大黄对象：
+						属性：
+							毛色
+							体重
+							品种
+						方法：
+							跑()
+							叫()
+											
+					播放器对象.播放()
+					用户对象.加好友("张三")
+					用户对象.性别
+					用户对象.大黄对象.叫()
+					console.log()
+					System.out.println()
+	 */
+		
+	 // JS中的对象使用花括号表示
+	 var dog = {
+	 	color: "黄色",
+	 	weight: 50,
+	 	run: function  () {
+	 		console.log("跑")
+	 	}
+
+	 }
+	 //JSON:JS对象  xml
+	 var p = {
+	 	age : 22,
+	 	sex : '男',
+	 	height : 1.7,
+	 	// d: dog,
+	 	d: {
+	 		color: "黄色",
+	 		weight: 50,
+	 		run: function  () {
+	 			console.log("跑")
+	 		}
+	 	},
+	 	addFriend : function  () {
+	 		console.log("加好友")
+	 	},
+	 	study: function  () {
+	 		console.log("学习")
+	 	}
+	 }
+
+	 
+
+	 // 调用p对象的study方法
+	 p.study()
+	 // 调用p对象的属性
+	 console.log(p.age)
+	 //修改属性
+	 p.age = 23;
+	 // 打印对象
+	 console.log(p)
+
+	 p.d.run()
+	</script>
+</body>
+</html>

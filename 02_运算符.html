@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var a = 10;
+	//a = a + 5;
+	// a += 5;
+	var b = 2 * 8 + 5 - 10
+	b = 5;
+	var k = b / 3;
+	console.log(k);//1.6666666666666667
+	k = b % 3;
+	console.log(k);
+
+	// 关系运算符
+	var n = 10;
+	var m = 20;
+	console.log(n > m);//false
+	console.log(n == m);//false
+	console.log(n != m);//true
+
+	// 逻辑运算符  &&  || !
+	// 判断一个数是否在 5 - 10 之间】
+	var y = 3;
+	console.log(y > 5 && y < 10)//false
+	// 判断一个数是否在 5 - 10 之外
+	console.log(y < 5 || y > 10)//true
+	console.log(!(2 > 1))//false
+	// 非0既真
+	console.log(!0)//true
+
+	// 自增 自减 ++ --
+	var i = 5;
+	i = i + 1;
+	i += 1;
+	i++;
+	console.log(i); //8
+
+	var h = 10;
+	// h++;
+	// ++h;
+	// ++ -- 和其他运算符结合使用时
+	// 如果++ --放后，会先进行其他的运算，再进行++ --
+	// 如果++ --放前，会先进行++ --，再进行其他运算
+	var d = h++;
+	console.log(d)
+	console.log(h)
+
+	var n = 5;
+	//    n = 8
+	//    = 5   + 7 +  7 + 9
+	var m = n++ + ++n + n++ + ++n;
+	console.log(n)
+	console.log(m)
+
+	</script>
+</body>
+</html>

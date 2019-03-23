@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<!-- 直接在标签当中绑定事件，这种绑定事件的第一种方式，这种方式很少使用 
+	<div class="box" onclick="fun()" style=""></div>
+	-->
+	<div class="box" style=""></div>
+	<script>
+		function fun() {
+			alert(1)
+		}
+	/*
+		第二种绑定方式
+			1. 获取到需要绑定事件的元素
+			2. 对象.事件名 = function(){}
+	 */
+	// 虽然只有一个div但是这个方法依然会返回一个数组
+	var arr = document.getElementsByClassName("box")
+	var box = arr[0]
+	console.log(arr)
+	// 单击事件
+	box.onclick = function  (event) {
+		// alert(1)
+		console.log(event)
+	}
+	// 双击事件
+	// box.ondblclick = function  () {
+	// 	alert(2)
+	// }
+	// 
+	// 绑定鼠标悬浮事件
+	box.onmouseover = function  () {
+		box.style.backgroundColor = "green"
+	}
+	// 绑定鼠标离开事件
+	box.onmouseout = function  () {
+		box.style.backgroundColor = "red"
+	}
+	</script>
+</body>
+</html>

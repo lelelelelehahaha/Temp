@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	// 定义在函数外部的变量：全局变量
+	// 全局变量可以任意的地方使用
+		var k = 10;
+		function fun () {
+			// 定义在函数内部的变量：局部变量
+			// 局部变量只能在定义他的函数内部使用
+			var k = 20;
+			console.log(k)//20
+			var c = 100
+		}
+		console.log(k)
+		//console.log(c)//c is not defined
+		fun()
+
+		// JS没有块作用域
+		for(var i = 0;i < 10;i++){
+
+		}
+		console.log(i)//10
+
+		if(2>1){
+			var j = 10
+		}
+		console.log(j)//10
+
+		{
+
+			var h = 20
+		}
+		console.log(h) //20
+	</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	/*
+		顺序结构
+		选择结构 if     switch
+		循环结构 while do...while for
+	 */
+	/*
+	if(2 > 1){
+		console.log("a")
+	}else{
+		console.log("b")
+	}
+	var score = prompt("输入分数");
+	score = score - 0;
+	if(score > 90){
+		alert("优秀")
+	}else if(score > 80){
+		alert("良好")
+	}else if(score > 60){
+		alert("及格")
+	}else{
+		alert("不及格")
+	}
+	*/
+/*
+		i = 0 j = 0 c = 1
+			  j = 1 c = 2
+		i = 1 j =0 
+
+ 
+	var c = 0;
+	for(var i = 0; i < 10;i++){
+		for(var j = 0;j < 10;j++){
+			c++;
+		}
+	}
+	
+	var k = 1;
+	while(k <= 10){
+		console.log(k)
+		k++;
+	}
+	*/
+	var k = 1;
+	do{
+		console.log(k)
+		k++;
+	}while(k <= 10)
+
+	for(var i = 0; i < 10;i++){
+		// console.log("*")
+		document.write("<b style='color:red'>*</b>")
+	}
+	document.write("<br>")
+	for(var i = 0; i < 10;i++){
+		// console.log("*")
+		document.write("<b>*</b>")
+	}
+	</script>
+	123 <br>
+	456
+</body>
+</html>

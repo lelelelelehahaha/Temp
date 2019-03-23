@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+	<style>	
+		ul{
+			list-style: none;
+		}
+		.pointer li{
+			width: 20px;	
+			height: 20px;	
+			background-color: #ccc;
+			float: left;
+			margin-left: 20px;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	<ul class="pointer">
+		<li onclick="change(0)"></li>
+		<li onclick="change(1)"></li>
+		<li onclick="change(2)"></li>
+	</ul>
+	<script>
+
+			// 根据标签名获取对应的多个元素，返回值是一个数组
+			var arr = document.getElementsByTagName("li")
+			console.log(arr)
+			function change (k) {
+				// 为了防止多个li的颜色都变红，先将所有的li都还原
+				for(var i = 0;i<arr.length;i++){
+					arr[i].style.backgroundColor = "#ccc"
+				}
+				arr[k].style.backgroundColor = "red"
+			}
+
+	</script>
+</body>
+</html>

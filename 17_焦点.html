@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{
+			list-style: none;
+		}
+		.pointer li{
+			width: 10px;
+			height: 10px;
+			border-radius: 5px;
+			border: 1px solid #e0e0e0;
+			float: left;
+			margin-left: 10px;
+		}
+		/* 选中的状态 */
+		.selected{
+			background-color: #e0e0e0;
+		}
+	</style>
+</head>
+<body>
+	<ul class="pointer">
+		<li onclick="fun(0)" class="selected"></li>
+		<li onclick="fun(1)"></li>
+		<li onclick="fun(2)"></li>
+		<li onclick="fun(3)"></li>
+		<li onclick="fun(4)"></li>
+	</ul>
+	<script>
+	// getElementsByTagName:通过标签名获取元素，返回的数组
+	var arr = document.getElementsByTagName("li")
+	console.log(arr)
+	function fun (k) {
+		// 为了防止样式重复，更改选中的li的时候，先将
+		// 所有的li的样式还原
+		for(var i = 0; i < arr.length;i++){
+			arr[i].className = ''
+		}
+		arr[k].className = "selected"
+	}
+	</script>
+</body>
+</html>

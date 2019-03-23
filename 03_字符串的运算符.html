@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var a = "abc"
+		var b = "jkl"
+		// 字符串相加可以拼接字符串
+		console.log(a+b)//abcjkl
+		console.log("22"+11)//2211
+		// 当字符串和其他的数据类型做除了+以外的运算符时,字符串会先转为数字再运算
+		console.log("22"-11);
+		console.log("22"*11);
+		console.log("22"/11);
+		console.log("22"%11);
+
+		//判断数据类型
+		var a = 22;
+		console.log(typeof a)//number
+		console.log(typeof true)//boolean
+		console.log(typeof "123")//string
+
+		// 输入数据,输入的结果都是字符串
+	 	var age = prompt("请输入年龄");
+	 	console.log(age+10)//2210
+	 	// 将字符串快速变为数字
+	 	age = age - 0
+	 	if(age > 18){
+	 		alert("符合要求")
+	 	}else{
+	 		alert("不符合要求")
+	 	}
+	 	
+	 	// 数据类型转换
+	 	// parseInt  parseFloat
+	 	console.log(age)
+	 	console.log(parseInt("22.22"))
+	 	console.log(parseFloat("22.22"))
+	 	console.log(parseInt(7.8))
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+	<style>	
+		h1{
+			text-align: center;
+		}
+		span{
+			font-size: 12px;
+			color: #e0e0e0;
+		}
+		.big{
+			font-size: 20px;
+			background-color:#e0e0e0;
+			color: green;
+		}
+		.small{
+			font-size: 12px;
+			background-color:#abcdef;
+			color: yellow;			
+		}
+	</style>
+</head>
+<body>
+	<h1>美国海军陆战队哭穷：经费都被特朗普挪走了</h1>
+	<span>2019-03-23 00:18:01　来源: 参考消息网(北京)</span>
+	<button onclick="changeClass('big')">放大</button>
+	<button onclick="changeClass('')">正常</button>
+	<button onclick="changeClass('small')">缩小</button>
+	<div id="news" >	
+	<p>	
+		参考消息网3月23日报道 美媒称，美国海军陆战队司令罗伯特·内勒将军警告代理国防部长帕特里克·沙纳汉，一系列“预料外的以及未编入预算的”任务已经对“海军陆战队的战备和偿付能力构成难以承受的风险”。这些任务还包括特朗普总统的“杰作”：向美国南部边境部署海军陆战队，重新分配部分国防预算以支付修建边境墙的费用。
+	</p>
+	<p>	
+		据美国有线电视新闻网3月22日报道，内勒表示，飓风救援行动是迄今为止成本最高的非计划任务，大约已经耗费了35亿美元。
+	</p>
+	<p>	
+		内勒在3月18日的备忘录中警告说，“预料外的以及未编入预算的因素”迫使海军陆战队取消或减少参加与盟友的军事演习。
+	</p>
+	</div>
+
+	<script>	
+			var news = document.getElementById("news")
+
+			/*
+			function big () {
+				news.className = "big"
+			}
+
+			function normal () {
+				news.className = ""
+			}
+
+			function small () {
+				news.className = "small"
+			}
+			*/
+						
+			function changeClass (cls) {
+				news.className = cls
+			}					
+	</script>
+</body>
+</html>

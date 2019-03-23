@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	/*
+		int fun(int a,float b){
+			
+		}
+	*/
+	// 无参数无返回值的函数
+	function sayHello(){
+		console.log("你好")
+	}
+	// 调用函数
+	sayHello()
+	sayHello()
+	sayHello()
+
+	// 定义一个求两个数和的函数
+	// a,b形式参数
+	function sum (a,b) {
+		return a+b
+	}
+	var k;
+	//var s = sum(1,2)
+	//console.log(s);//undefined  3
+
+	// 不定参数,JS中允许形式参数和实际参数的个数不匹配
+	//var s = sum(1,2,4,6,7,8)
+	//console.log(s);//3
+
+	function sum () {
+		// JS的函数中一个内置对象，这个对象存储了调用函数时，传递的参数
+		console.log(arguments)
+		//可以通过下标取出对应元素
+		// arguments[0]
+		var sum = 0;
+		for(var i = 0; i < arguments.length;i++){
+			sum += arguments[i]
+		}
+		return sum;
+	}
+	var s = sum(1,2,4,6,1,2)
+	s = sum(1,2,4)
+	s = sum("a","b","c")
+	console.log(s)
+
+	// console.log本身也可以接受任意个参数
+	//console.log(2,3,4,5,6,67,7)
+	</script>
+</body>
+</html>
