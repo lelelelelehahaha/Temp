@@ -2,4 +2,4 @@
 
 临时存储用 just a temp repository
 
-![](https://upload.cc/i1/2019/03/24/zub14Y.gif)
+![](https://ip.ntrqq.net/images/gosec.png?wd=JUU2JUE4JUIxJUU4JThBJUIxJUU0JUI4JThCJUU4JTkwJUJEJUU3JTlBJTg0JUU5JTgwJTlGJUU1JUJBJUE2JUU2JTk4JUFGJUU1JUE0JTlBJUU1JUIwJTkxJUVGJUJDJTlG&r=1r61a0udy5j)
